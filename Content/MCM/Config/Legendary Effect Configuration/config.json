@@ -1,0 +1,384 @@
+{
+    "modName": "Legendary Effect Configuration",
+    "displayName": "Legendary Effect Configuration",
+    "minMcmVersion": 1,
+    "content": [
+    ],
+    "pages": [
+        {
+            "pageDisplayName": "Armor",
+            "content": [
+                {
+                    "text": "SPECIAL Stats",
+                    "type": "section"
+                },
+                {
+                    "text": "Cunning",
+                    "type": "switcher",
+                    "help": "+1 Agility and +1 Perception",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "CunningArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Fortifying",
+                    "type": "switcher",
+                    "help": "+1 Strength and Endurance",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "FortifyingArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Lucky",
+                    "type": "switcher",
+                    "help": "+2 Luck",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "LuckyArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Sharp",
+                    "type": "switcher",
+                    "help": "+1 Charisma and +1 Intelligence",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "SharpArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Damage Reduction By Enemy Type",
+                    "type": "section"
+                },
+                {
+                    "text": "Assassin's",
+                    "type": "switcher",
+                    "help": "Reduces damage from humans by 15%",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "AssassinsArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Exterminator's",
+                    "type": "switcher",
+                    "help": "Reduces damage from bugs by 15%",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "ExterminatorsArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Ghoul Slayer's",
+                    "type": "switcher",
+                    "help": "Reduces damage from ghouls by 15%",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "GhoulSlayersArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Hunter's",
+                    "type": "switcher",
+                    "help": "Reduces damage from animals by 15%",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "HuntersArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Mutant Slayer's",
+                    "type": "switcher",
+                    "help": "Reduces damage from Super Mutants by 15%",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "MutantSlayersArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Troubleshooter's",
+                    "type": "switcher",
+                    "help": "Reduces damage from robots by 15%",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "TroubleshootersArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Other Damage Reduction",
+                    "type": "section"
+                },
+                {
+                    "text": "Bolstering",
+                    "type": "switcher",
+                    "help": "Grants increasing energy and damage resistance the lower your Health (up to +35)",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "BolsteringArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Cavalier's",
+                    "type": "switcher",
+                    "help": "Reduces damage while blocking or sprinting by 15%",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "CavaliersArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Poisoner's",
+                    "type": "switcher",
+                    "help": "+25 poison resistance",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "PoisonersArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Sentinel's",
+                    "type": "switcher",
+                    "help": "Reduces damage while standing and not moving by 15%",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "SentinelsArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Melee",
+                    "type": "section"
+                },
+                {
+                    "text": "Duelist's",
+                    "type": "switcher",
+                    "help": "10% chance to disarm melee attacker on hit",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "DuelistsArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Punishing",
+                    "type": "switcher",
+                    "help": "Reflects 10% of melee damage back on attacker",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "PunishingArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Miscellaneous",
+                    "type": "section"
+                },
+                {
+                    "text": "Acrobat's (Legs Only)",
+                    "type": "switcher",
+                    "help": "Reduces falling damage by 50%",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "AcrobatsArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Chameleon",
+                    "type": "switcher",
+                    "help": "Enemies have a harder time detecting you while you're sneaking and not moving",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "ChameleonArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Martyr's (Chest Only)",
+                    "type": "switcher",
+                    "help": "Temporarily slows time down during combat when you are at 20% or less Health",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "MartyrsArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Powered",
+                    "type": "switcher",
+                    "help": "Increases Action Point refresh speed",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "PoweredArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Safecracker's",
+                    "type": "switcher",
+                    "help": "Increases size of sweet spot while picking locks",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "SafecrackersArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Sprinter's (Legs Only)",
+                    "type": "switcher",
+                    "help": "Increases movement speed by 10%",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "SprintersArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "VATS Enhanced",
+                    "type": "switcher",
+                    "help": "10% reduction in Action Point cost in V.A.T.S.",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "VATSEnhancedArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                }
+            ]
+        },
+        {
+            "pageDisplayName": "Weapons",
+            "content": [
+            ]
+        }
+    ]
+}
