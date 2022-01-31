@@ -378,6 +378,619 @@
         {
             "pageDisplayName": "Weapons",
             "content": [
+                {
+                    "text": "Damage Increase By Enemy Type",
+                    "type": "section"
+                },
+                {
+                    "text": "Assassin's",
+                    "type": "switcher",
+                    "help": "Does 50% more damage against humans",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "AssassinsWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Exterminator's",
+                    "type": "switcher",
+                    "help": "Does 50% more damage against bugs",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "ExterminatorsWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Ghoul Slayer's",
+                    "type": "switcher",
+                    "help": "Does 50% more damage against ghouls",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "GhoulSlayersWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Hunter's",
+                    "type": "switcher",
+                    "help": "Does 50% more damage against animals",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "HuntersWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Mutant Slayer's",
+                    "type": "switcher",
+                    "help": "Does 50% more damage against Super Mutants",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "MutantSlayersWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Troubleshooter's",
+                    "type": "switcher",
+                    "help": "Does 50% more damage against robots",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "TroubleshootersWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Additional Damage Types",
+                    "type": "section"
+                },
+                {
+                    "text": "Explosive (Ballistic Weapons Only)",
+                    "type": "switcher",
+                    "help": "Bullets explode on impact doing 15 points area-of-effect damage",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "ExplosiveBulletsEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Freezing",
+                    "type": "switcher",
+                    "help": "Does 10 points cryo damage and will freeze targets on critical hits",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "FreezingWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Incendiary (Ballistic Weapons Only)",
+                    "type": "switcher",
+                    "help": "Sets target on fire for 15 points of damage",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "IncendiaryBulletsEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Irradiated",
+                    "type": "switcher",
+                    "help": "Does 50 points additional radiation damage",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "IrradiatedWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Plasma-Infused (Ballistic Weapons Only)",
+                    "type": "switcher",
+                    "help": "Adds 10 points of energy damage and can turn enemies into goo",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "PlasmaBulletsEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Poisoner's",
+                    "type": "switcher",
+                    "help": "Target is poisoned for 10 seconds (3 points poison damage per second)",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "PoisonersWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Wounding",
+                    "type": "switcher",
+                    "help": "Targets bleed for 25 points of additional damage, spread over 5 seconds",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "WoundingWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Other Damage Increases",
+                    "type": "section"
+                },
+                {
+                    "text": "Berserker's (Melee Only)",
+                    "type": "switcher",
+                    "help": "Does more damage the lower the player character's Armor Resistance (up to 200% at 0 resistance)",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "BerserkersMeleeEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Bloodied (Melee Only)",
+                    "type": "switcher",
+                    "help": "Does more damage the lower the user's health is (5% damage per 5% health lost, up to +95% damage at 5% HP)",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "BloodiedMeleeEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Furious (Melee Only)",
+                    "type": "switcher",
+                    "help": "Damage increased by 15% after each consecutive hit on the same target",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "FuriousMeleeEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Instigating",
+                    "type": "switcher",
+                    "help": "Does double damage if the target is at full health",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "InstigatingWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Junkie's",
+                    "type": "switcher",
+                    "help": "Does 15% more damage for each addiction the Sole Survivor has",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "JunkiesWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Nocturnal",
+                    "type": "switcher",
+                    "help": "Does increasing amounts of damage as the night grows longer and less damage during the day",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "NocturnalWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Penetrating",
+                    "type": "switcher",
+                    "help": "Ignores 30% of the target's damage and energy resistance",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "PenetratingWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Powerful",
+                    "type": "switcher",
+                    "help": "Provides 25% more damage",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "PowerfulWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Two Shot (Guns Only)",
+                    "type": "switcher",
+                    "help": "Fires an additional projectile, but has +25% more recoil",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "TwoShotWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Violent (Ballistic Weapons Only)",
+                    "type": "switcher",
+                    "help": "Deals +25% damage and limb damage, but has +25% more recoil",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "ViolentBulletsEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Critical Hits",
+                    "type": "section"
+                },
+                {
+                    "text": "Enraging",
+                    "type": "switcher",
+                    "help": "Critical hits cause target to frenzy",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "EnragingWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Lucky",
+                    "type": "switcher",
+                    "help": "Critical shots do double damage and the critical meter fills 15% faster",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "LuckyWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Relentless",
+                    "type": "switcher",
+                    "help": "Refills Action Points on a critical hit",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "RelentlessWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "VATS",
+                    "type": "section"
+                },
+                {
+                    "text": "Quickdraw",
+                    "type": "switcher",
+                    "help": "Costs 25% fewer Action Points",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "QuickdrawWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Stalker's (Gun Only)",
+                    "type": "switcher",
+                    "help": "If not yet in combat, 100% increased V.A.T.S. accuracy, but costs 50% more AP",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "StalkersGunEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "VATS Enhanced (Guns)",
+                    "type": "switcher",
+                    "help": "+33% V.A.T.S. hit chance, 25% less Action Point cost",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "VATSEnhancedGunEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "VATS Enhanced (Melee)",
+                    "type": "switcher",
+                    "help": "40% less Action Point cost",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "VATSEnhancedMeleeEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Increased Defense",
+                    "type": "section"
+                },
+                {
+                    "text": "Cavalier's (Melee Only)",
+                    "type": "switcher",
+                    "help": "Reduces damage by 15% while blocking or sprinting",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "CavaliersWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Sentinel's (Melee Only)",
+                    "type": "switcher",
+                    "help": "Take 15% less damage while standing and not moving",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "SentinelsWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Miscellaneous",
+                    "type": "section"
+                },
+                {
+                    "text": "Automatic Laser Musket",
+                    "type": "switcher",
+                    "help": "Automatic fire mode",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "AutomaticLaserMusketEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Crippling",
+                    "type": "switcher",
+                    "help": "50% more limb damage",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "CripplingWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Kneecapper",
+                    "type": "switcher",
+                    "help": "20% chance to cripple the target's leg",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "KneecapperWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Neverending",
+                    "type": "switcher",
+                    "help": "Unlimited ammo capacity",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "NeverendingWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Nimble (Guns Only)",
+                    "type": "switcher",
+                    "help": "Provides 75% faster movement while aiming",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "NimbleGunEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Rapid (Guns Only)",
+                    "type": "switcher",
+                    "help": "25% faster fire rate, 15% faster reload",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "RapidGunEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                },
+                {
+                    "text": "Staggering",
+                    "type": "switcher",
+                    "help": "Chance to stagger on hit",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "StaggeringWeaponEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    }
+                }
             ]
         }
     ]
