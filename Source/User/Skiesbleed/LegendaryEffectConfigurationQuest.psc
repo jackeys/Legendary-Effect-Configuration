@@ -8,8 +8,8 @@ LegendaryItemQuestScript Property LegendaryItemQuest const auto mandatory
 bool Property LuckyWeaponEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property LuckyWeaponModRule Const Auto Mandatory
 
-bool Property PowerfuWeaponEnabled = true Auto
-LegendaryItemQuestScript:LegendaryModRule Property PowerfuWeaponModRule Const Auto Mandatory
+bool Property PowerfulWeaponEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property PowerfulWeaponModRule Const Auto Mandatory
 
 bool Property IrradiatedWeaponEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property IrradiatedWeaponModRule Const Auto Mandatory
@@ -119,6 +119,9 @@ LegendaryItemQuestScript:LegendaryModRule Property PlasmaBulletsModRule Const Au
 bool Property AutomaticLaserMusketEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property AutomaticLaserMusketModRule Const Auto Mandatory
 
+bool Property JunkiesWeaponEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property JunkiesWeaponModRule Const Auto Mandatory
+
 ; Armor
 
 bool Property CunningArmorEnabled = true Auto
@@ -222,7 +225,7 @@ Function UpdateLegendaryModRules()
 
     ; Weapons
 	UpdateModRule("Lucky (Weapon)", LuckyWeaponEnabled, LuckyWeaponModRule)
-	UpdateModRule("Powerful (Weapon)", PowerfuWeaponEnabled, PowerfuWeaponModRule)
+	UpdateModRule("Powerful (Weapon)", PowerfulWeaponEnabled, PowerfulWeaponModRule)
 	UpdateModRule("Irradiated (Weapon)", IrradiatedWeaponEnabled, IrradiatedWeaponModRule)
 	UpdateModRule("Two Shot (Weapon)", TwoShotWeaponEnabled, TwoShotWeaponModRule)
 	UpdateModRule("Neverending (Weapon)", NeverendingWeaponEnabled, NeverendingWeaponModRule)
@@ -258,6 +261,7 @@ Function UpdateLegendaryModRules()
 	UpdateModRule("Enraging (Weapon)", EnragingWeaponEnabled, EnragingWeaponModRule)
 	UpdateModRule("Cavalier's (Weapon)", CavaliersWeaponEnabled, CavaliersWeaponModRule)
 	UpdateModRule("Sentinel's (Weapon)", SentinelsWeaponEnabled, SentinelsWeaponModRule)
+	UpdateModRule("Junkie's (Weapon)", JunkiesWeaponEnabled, JunkiesWeaponModRule)
 	UpdateModRule("Automatic Laser Musket", AutomaticLaserMusketEnabled, AutomaticLaserMusketModRule)
 EndFunction
 
