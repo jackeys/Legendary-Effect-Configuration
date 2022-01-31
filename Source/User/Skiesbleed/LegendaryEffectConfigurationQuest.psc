@@ -4,11 +4,9 @@ Scriptname Skiesbleed:LegendaryEffectConfigurationQuest extends Quest
 LegendaryItemQuestScript Property LegendaryItemQuest const auto mandatory
 {Autofill}
 
-; Armor
-
 ; Weapons
-bool Property LuckWeaponEnabled = true Auto
-LegendaryItemQuestScript:LegendaryModRule Property LuckWeaponModRule Const Auto Mandatory
+bool Property LuckyWeaponEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property LuckyWeaponModRule Const Auto Mandatory
 
 bool Property PowerfuWeaponEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property PowerfuWeaponModRule Const Auto Mandatory
@@ -121,12 +119,109 @@ LegendaryItemQuestScript:LegendaryModRule Property PlasmaBulletsModRule Const Au
 bool Property AutomaticLaserMusketEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property AutomaticLaserMusketModRule Const Auto Mandatory
 
+; Armor
+
+bool Property CunningArmorEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property CunningArmorModRule Const Auto Mandatory
+
+bool Property SharpArmorEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property SharpArmorModRule Const Auto Mandatory
+
+bool Property LuckyArmorEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property LuckyArmorModRule Const Auto Mandatory
+
+bool Property FortifyingArmorEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property FortifyingArmorModRule Const Auto Mandatory
+
+bool Property SprintersArmorEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property SprintersArmorModRule Const Auto Mandatory
+
+bool Property VATSEnhancedArmorEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property VATSEnhancedArmorModRule Const Auto Mandatory
+
+bool Property HuntersArmorEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property HuntersArmorModRule Const Auto Mandatory
+
+bool Property ExterminatorsArmorEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property ExterminatorsArmorModRule Const Auto Mandatory
+
+bool Property GhoulSlayersArmorEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property GhoulSlayersArmorModRule Const Auto Mandatory
+
+bool Property AssassinsArmorEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property AssassinsArmorModRule Const Auto Mandatory
+
+bool Property TroubleshootersArmorEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property TroubleshootersArmorModRule Const Auto Mandatory
+
+bool Property MutantSlayersArmorEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property MutantSlayersArmorModRule Const Auto Mandatory
+
+bool Property AcrobatsArmorEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property AcrobatsArmorModRule Const Auto Mandatory
+
+bool Property PunishingArmorEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property PunishingArmorModRule Const Auto Mandatory
+
+bool Property MartyrsArmorEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property MartyrsArmorModRule Const Auto Mandatory
+
+bool Property PoisonersArmorEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property PoisonersArmorModRule Const Auto Mandatory
+
+bool Property DuelistsArmorEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property DuelistsArmorModRule Const Auto Mandatory
+
+bool Property SafecrackersArmorEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property SafecrackersArmorModRule Const Auto Mandatory
+
+bool Property ChameleonArmorEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property ChameleonArmorModRule Const Auto Mandatory
+
+bool Property CavaliersArmorEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property CavaliersArmorModRule Const Auto Mandatory
+
+bool Property SentinelsArmorEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property SentinelsArmorModRule Const Auto Mandatory
+
+bool Property PoweredArmorEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property PoweredArmorModRule Const Auto Mandatory
+
+bool Property BolsteringArmorEnabled = true Auto
+LegendaryItemQuestScript:LegendaryModRule Property BolsteringArmorModRule Const Auto Mandatory
+
 Event OnQuestInit()
 	UpdateLegendaryModRules()
 EndEvent
 
 Function UpdateLegendaryModRules()
-	UpdateModRule("Lucky (Weapon)", LuckWeaponEnabled, LuckWeaponModRule)
+    ; Armor
+	UpdateModRule("Cunning (Armor)", CunningArmorEnabled, CunningArmorModRule)
+	UpdateModRule("Sharp (Armor)", SharpArmorEnabled, SharpArmorModRule)
+	UpdateModRule("Lucky (Armor)", LuckyArmorEnabled, LuckyArmorModRule)
+	UpdateModRule("Fortifying (Armor)", FortifyingArmorEnabled, FortifyingArmorModRule)
+	UpdateModRule("Punishing (Armor)", PunishingArmorEnabled, PunishingArmorModRule)
+	UpdateModRule("Chameleon (Armor)", ChameleonArmorEnabled, ChameleonArmorModRule)
+	UpdateModRule("Powered (Armor)", PoweredArmorEnabled, PoweredArmorModRule)
+	UpdateModRule("Bolstering (Armor)", BolsteringArmorEnabled, BolsteringArmorModRule)
+	UpdateModRule("Sprinter's (Armor)", SprintersArmorEnabled, SprintersArmorModRule)
+	UpdateModRule("Acrobat's (Armor)", AcrobatsArmorEnabled, AcrobatsArmorModRule)
+	UpdateModRule("VATS Enhanced (Armor)", VATSEnhancedArmorEnabled, VATSEnhancedArmorModRule)
+	UpdateModRule("Hunter's (Armor)", HuntersArmorEnabled, HuntersArmorModRule)
+	UpdateModRule("Exterminator's (Armor)", ExterminatorsArmorEnabled, ExterminatorsArmorModRule)
+	UpdateModRule("Assassin's (Armor)", AssassinsArmorEnabled, AssassinsArmorModRule)
+	UpdateModRule("Troubleshooter's (Armor)", TroubleshootersArmorEnabled, TroubleshootersArmorModRule)
+	UpdateModRule("Martyr's (Armor)", MartyrsArmorEnabled, MartyrsArmorModRule)
+	UpdateModRule("Poisoner's (Armor)", PoisonersArmorEnabled, PoisonersArmorModRule)
+	UpdateModRule("Duelist's (Armor)", DuelistsArmorEnabled, DuelistsArmorModRule)
+	UpdateModRule("Safecracker's (Armor)", SafecrackersArmorEnabled, SafecrackersArmorModRule)
+	UpdateModRule("Cavalier's (Armor)", CavaliersArmorEnabled, CavaliersArmorModRule)
+	UpdateModRule("Sentinel's (Armor)", SentinelsArmorEnabled, SentinelsArmorModRule)
+	UpdateModRule("Ghoul Slayer's (Armor)", GhoulSlayersArmorEnabled, GhoulSlayersArmorModRule)
+	UpdateModRule("Mutant Slayer's (Armor)", MutantSlayersArmorEnabled, MutantSlayersArmorModRule)
+
+    ; Weapons
+	UpdateModRule("Lucky (Weapon)", LuckyWeaponEnabled, LuckyWeaponModRule)
 	UpdateModRule("Powerful (Weapon)", PowerfuWeaponEnabled, PowerfuWeaponModRule)
 	UpdateModRule("Irradiated (Weapon)", IrradiatedWeaponEnabled, IrradiatedWeaponModRule)
 	UpdateModRule("Two Shot (Weapon)", TwoShotWeaponEnabled, TwoShotWeaponModRule)
