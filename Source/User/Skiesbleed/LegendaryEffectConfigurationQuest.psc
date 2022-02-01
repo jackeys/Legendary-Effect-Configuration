@@ -1,6 +1,12 @@
 Scriptname Skiesbleed:LegendaryEffectConfigurationQuest extends Quest
 {Manages which custom legendary effects are present in the pool of possible legendaries that the main game has}
 
+Struct ExternalLegendaryModRule
+    FormList AllowedKeywords
+    FormList DisallowedKeywords
+    int LegendaryObjectModFormID
+EndStruct
+
 LegendaryItemQuestScript Property LegendaryItemQuest const auto mandatory
 {Autofill}
 
@@ -193,6 +199,56 @@ LegendaryItemQuestScript:LegendaryModRule Property PoweredArmorModRule Const Aut
 bool Property BolsteringArmorEnabled = true Auto
 LegendaryItemQuestScript:LegendaryModRule Property BolsteringArmorModRule Const Auto Mandatory
 
+; Far Harbor
+
+bool Property FHHitmansGunEnabled = true Auto
+ExternalLegendaryModRule Property FHHitmansGunModRule Const Auto Mandatory
+
+bool Property FHSteadfastGunEnabled = true Auto
+ExternalLegendaryModRule Property FHSteadfastGunModRule Const Auto Mandatory
+
+bool Property FHResilientGunEnabled = true Auto
+ExternalLegendaryModRule Property FHResilientGunModRule Const Auto Mandatory
+
+bool Property FHDeadeyeGunEnabled = true Auto
+ExternalLegendaryModRule Property FHDeadeyeGunModRule Const Auto Mandatory
+
+bool Property FHResoluteGunEnabled = true Auto
+ExternalLegendaryModRule Property FHResoluteGunModRule Const Auto Mandatory
+
+bool Property FHDefiantGunEnabled = true Auto
+ExternalLegendaryModRule Property FHDefiantGunModRule Const Auto Mandatory
+
+bool Property FHFrigidMeleeEnabled = true Auto
+ExternalLegendaryModRule Property FHFrigidMeleeModRule Const Auto Mandatory
+
+bool Property FHBlazingMeleeEnabled = true Auto
+ExternalLegendaryModRule Property FHBlazingMeleeModRule Const Auto Mandatory
+
+bool Property FHChargedMeleeEnabled = true Auto
+ExternalLegendaryModRule Property FHChargedMeleeModRule Const Auto Mandatory
+
+bool Property FHDuelistsMeleeEnabled = true Auto
+ExternalLegendaryModRule Property FHDuelistsMeleeModRule Const Auto Mandatory
+
+bool Property FHIncendiaryArmorEnabled = true Auto
+ExternalLegendaryModRule Property FHIncendiaryArmorModRule Const Auto Mandatory
+
+bool Property FHCryogenicArmorEnabled = true Auto
+ExternalLegendaryModRule Property FHCryogenicArmorModRule Const Auto Mandatory
+
+bool Property FHCloakingArmorEnabled = true Auto
+ExternalLegendaryModRule Property FHCloakingArmorModRule Const Auto Mandatory
+
+bool Property FHUnyieldingArmorEnabled = true Auto
+ExternalLegendaryModRule Property FHUnyieldingArmorModRule Const Auto Mandatory
+
+bool Property FHAutoStimArmorEnabled = true Auto
+ExternalLegendaryModRule Property FHAutoStimArmorModRule Const Auto Mandatory
+
+bool Property FHRadPoweredArmorEnabled = true Auto
+ExternalLegendaryModRule Property FHRadPoweredArmorModRule Const Auto Mandatory
+
 Event OnQuestInit()
 	UpdateLegendaryModRules()
 EndEvent
@@ -263,6 +319,37 @@ Function UpdateLegendaryModRules()
 	UpdateModRule("Sentinel's (Weapon)", SentinelsWeaponEnabled, SentinelsWeaponModRule)
 	UpdateModRule("Junkie's (Weapon)", JunkiesWeaponEnabled, JunkiesWeaponModRule)
 	UpdateModRule("Automatic Laser Musket", AutomaticLaserMusketEnabled, AutomaticLaserMusketModRule)
+
+    ; Far Harbor
+	UpdateFarHarborModRule("Hitman's (Gun) [Far Harbor]", FHHitmansGunEnabled, FHHitmansGunModRule)
+	UpdateFarHarborModRule("Steadfast (Gun) [Far Harbor]", FHSteadfastGunEnabled, FHSteadfastGunModRule)
+	UpdateFarHarborModRule("Resilient (Gun) [Far Harbor]", FHResilientGunEnabled, FHResilientGunModRule)
+	UpdateFarHarborModRule("Deadeye (Gun) [Far Harbor]", FHDeadeyeGunEnabled, FHDeadeyeGunModRule)
+	UpdateFarHarborModRule("Resolute (Gun) [Far Harbor]", FHResoluteGunEnabled, FHResoluteGunModRule)
+	UpdateFarHarborModRule("Defiant (Gun) [Far Harbor]", FHDefiantGunEnabled, FHDefiantGunModRule)
+	UpdateFarHarborModRule("Frigid (Melee) [Far Harbor]", FHFrigidMeleeEnabled, FHFrigidMeleeModRule)
+	UpdateFarHarborModRule("Blazing (Melee) [Far Harbor]", FHBlazingMeleeEnabled, FHBlazingMeleeModRule)
+	UpdateFarHarborModRule("Charged (Melee) [Far Harbor]", FHChargedMeleeEnabled, FHChargedMeleeModRule)
+	UpdateFarHarborModRule("Duelist's (Melee) [Far Harbor]", FHDuelistsMeleeEnabled, FHDuelistsMeleeModRule)
+	UpdateFarHarborModRule("Incendiary (Armor) [Far Harbor]", FHIncendiaryArmorEnabled, FHIncendiaryArmorModRule)
+	UpdateFarHarborModRule("Cryogenic (Armor) [Far Harbor]", FHCryogenicArmorEnabled, FHCryogenicArmorModRule)
+	UpdateFarHarborModRule("Cloaking (Armor) [Far Harbor]", FHCloakingArmorEnabled, FHCloakingArmorModRule)
+	UpdateFarHarborModRule("Unyielding (Armor) [Far Harbor]", FHUnyieldingArmorEnabled, FHUnyieldingArmorModRule)
+	UpdateFarHarborModRule("Auto Stim (Armor) [Far Harbor]", FHAutoStimArmorEnabled, FHAutoStimArmorModRule)
+	UpdateFarHarborModRule("Rad Powered (Armor) [Far Harbor]", FHRadPoweredArmorEnabled, FHRadPoweredArmorModRule)
+EndFunction
+
+Function UpdateFarHarborModRule(string asName, bool abEnabled, ExternalLegendaryModRule akRule)
+    ObjectMod legendaryMod = Game.GetFormFromFile(akRule.LegendaryObjectModFormID, "DLCCoast.esm") as ObjectMod
+
+    if legendaryMod
+        LegendaryItemQuestScript:LegendaryModRule legendaryRule = new LegendaryItemQuestScript:LegendaryModRule
+        legendaryRule.AllowedKeywords = akRule.AllowedKeywords
+        legendaryRule.DisallowedKeywords = akRule.DisallowedKeywords
+        legendaryRule.LegendaryObjectMod = legendaryMod
+
+        UpdateModRule(asName, abEnabled, legendaryRule)
+    endIf
 EndFunction
 
 Function UpdateModRule(string asName, bool abEnabled, LegendaryItemQuestScript:LegendaryModRule akRule)

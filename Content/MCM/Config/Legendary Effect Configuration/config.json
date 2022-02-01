@@ -9,6 +9,17 @@
             "pageDisplayName": "Armor",
             "content": [
                 {
+                    "text": "Far Harbor Installed",
+                    "type": "switcher",
+                    "help": "Global variable DLCcoastLoaded",
+                    "valueOptions": {
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "DLCCoast.esm|800"
+                    },
+                    "groupCondition": 99,
+                    "groupControl": 1
+                },
+                {
                     "text": "SPECIAL Stats",
                     "type": "section"
                 },
@@ -58,6 +69,22 @@
                     }
                 },
                 {
+                    "text": "Rad Powered (Chest Only)",
+                    "type": "switcher",
+                    "help": "Grants additional Strength the higher your rads",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "FHRadPoweredArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    },
+                    "groupCondition": 1
+                },
+                {
                     "text": "Sharp",
                     "type": "switcher",
                     "help": "+1 Charisma and +1 Intelligence",
@@ -71,6 +98,22 @@
                         "form": "Legendary Effect Configuration.esp|001",
                         "function": "UpdateLegendaryModRules"
                     }
+                },
+                {
+                    "text": "Unyielding (Chest Only)",
+                    "type": "switcher",
+                    "help": "+3 to all stats when you are at 25% or less health",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "FHUnyieldingArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    },
+                    "groupCondition": 1
                 },
                 {
                     "text": "Damage Reduction By Enemy Type",
@@ -235,6 +278,38 @@
                     "type": "section"
                 },
                 {
+                    "text": "Cloaking (Chest Only)",
+                    "type": "switcher",
+                    "help": "Being hit in melee generates a Stealth Field once per 60 seconds",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "FHCloakingArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    },
+                    "groupCondition": 1
+                },
+                {
+                    "text": "Cryogenic (Chest Only)",
+                    "type": "switcher",
+                    "help": "10% chance to freeze melee attackers, once every 20 seconds",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "FHCryogenicArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    },
+                    "groupCondition": 1
+                },
+                {
                     "text": "Duelist's",
                     "type": "switcher",
                     "help": "10% chance to disarm melee attacker on hit",
@@ -248,6 +323,22 @@
                         "form": "Legendary Effect Configuration.esp|001",
                         "function": "UpdateLegendaryModRules"
                     }
+                },
+                {
+                    "text": "Incendiary (Chest Only)",
+                    "type": "switcher",
+                    "help": "30% chance to ignite melee attackers, once every 20 seconds",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "FHIncendiaryArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    },
+                    "groupCondition": 1
                 },
                 {
                     "text": "Punishing",
@@ -282,6 +373,22 @@
                         "form": "Legendary Effect Configuration.esp|001",
                         "function": "UpdateLegendaryModRules"
                     }
+                },
+                {
+                    "text": "Auto Stim (Chest Only)",
+                    "type": "switcher",
+                    "help": "Automatically use a stimpak when hit while health is 25% or less, once every 60 seconds",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "FHAutoStimArmorEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    },
+                    "groupCondition": 1
                 },
                 {
                     "text": "Chameleon",
@@ -378,6 +485,17 @@
         {
             "pageDisplayName": "Weapons",
             "content": [
+                {
+                    "text": "Far Harbor Installed",
+                    "type": "switcher",
+                    "help": "Global variable DLCcoastLoaded",
+                    "valueOptions": {
+                        "sourceType": "GlobalValue",
+                        "sourceForm": "DLCCoast.esm|800"
+                    },
+                    "groupCondition": 99,
+                    "groupControl": 1
+                },
                 {
                     "text": "Damage Increase By Enemy Type",
                     "type": "section"
@@ -616,6 +734,22 @@
                     }
                 },
                 {
+                    "text": "Defiant (Guns Only)",
+                    "type": "switcher",
+                    "help": "The final shot in the magazine deals twice the normal damage",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "FHDefiantGunEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    },
+                    "groupCondition": 1
+                },
+                {
                     "text": "Furious (Melee Only)",
                     "type": "switcher",
                     "help": "Damage increased by 15% after each consecutive hit on the same target",
@@ -629,6 +763,22 @@
                         "form": "Legendary Effect Configuration.esp|001",
                         "function": "UpdateLegendaryModRules"
                     }
+                },
+                {
+                    "text": "Hitman's (Guns Only)",
+                    "type": "switcher",
+                    "help": "Does 10% more damage when looking down the sights",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "FHHitmansGunEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    },
+                    "groupCondition": 1
                 },
                 {
                     "text": "Instigating",
@@ -804,7 +954,7 @@
                     }
                 },
                 {
-                    "text": "Stalker's (Gun Only)",
+                    "text": "Stalker's (Guns Only)",
                     "type": "switcher",
                     "help": "If not yet in combat, 100% increased V.A.T.S. accuracy, but costs 50% more AP",
                     "valueOptions": {
@@ -868,6 +1018,22 @@
                     }
                 },
                 {
+                    "text": "Resilient (Guns Only)",
+                    "type": "switcher",
+                    "help": "+150 damage resistance while reloading",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "FHResilientGunEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    },
+                    "groupCondition": 1
+                },
+                {
                     "text": "Sentinel's (Melee Only)",
                     "type": "switcher",
                     "help": "Take 15% less damage while standing and not moving",
@@ -881,6 +1047,91 @@
                         "form": "Legendary Effect Configuration.esp|001",
                         "function": "UpdateLegendaryModRules"
                     }
+                },
+                {
+                    "text": "Steadfast (Guns Only)",
+                    "type": "switcher",
+                    "help": "+50 damage resistance while aiming",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "FHSteadfastGunEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    },
+                    "groupCondition": 1
+                },
+                {
+                    "text": "Melee Blocking",
+                    "type": "section",
+                    "groupCondition": 1
+                },
+                {
+                    "text": "Blazing (Melee Only)",
+                    "type": "switcher",
+                    "help": "Blocking has a 25% chance to set attackers on fire for 50 damage",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "FHBlazingMeleeEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    },
+                    "groupCondition": 1
+                },
+                {
+                    "text": "Charged (Melee Only)",
+                    "type": "switcher",
+                    "help": "10% chance to deal 100 Electrical damage on a successful block",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "FHChargedMeleeEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    },
+                    "groupCondition": 1
+                },
+                {
+                    "text": "Duelist's (Melee Only)",
+                    "type": "switcher",
+                    "help": "25% chance to disarm attackers on a successful block",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "FHDuelistsMeleeEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    },
+                    "groupCondition": 1
+                },
+                {
+                    "text": "Frigid (Melee Only)",
+                    "type": "switcher",
+                    "help": "20% chance to freeze the enemy when blocking attacks",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "FHFrigidMeleeEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    },
+                    "groupCondition": 1
                 },
                 {
                     "text": "Miscellaneous",
@@ -915,6 +1166,22 @@
                         "form": "Legendary Effect Configuration.esp|001",
                         "function": "UpdateLegendaryModRules"
                     }
+                },
+                {
+                    "text": "Deadeye (Guns Only)",
+                    "type": "switcher",
+                    "help": "Time slows down for a moment while aiming",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "FHDeadeyeGunEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    },
+                    "groupCondition": 1
                 },
                 {
                     "text": "Kneecapper",
@@ -975,6 +1242,22 @@
                         "form": "Legendary Effect Configuration.esp|001",
                         "function": "UpdateLegendaryModRules"
                     }
+                },
+                {
+                    "text": "Resolute (Guns Only)",
+                    "type": "switcher",
+                    "help": "Slows time momentarily as the last round is chambered",
+                    "valueOptions": {
+                        "sourceType": "PropertyValueBool",
+                        "sourceForm": "Legendary Effect Configuration.esp|001",
+                        "propertyName": "FHResoluteGunEnabled"
+                    },
+                    "action": {
+                        "type": "CallFunction",
+                        "form": "Legendary Effect Configuration.esp|001",
+                        "function": "UpdateLegendaryModRules"
+                    },
+                    "groupCondition": 1
                 },
                 {
                     "text": "Staggering",
