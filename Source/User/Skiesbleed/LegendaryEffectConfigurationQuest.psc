@@ -249,10 +249,6 @@ ExternalLegendaryModRule Property FHAutoStimArmorModRule Const Auto Mandatory
 bool Property FHRadPoweredArmorEnabled = true Auto
 ExternalLegendaryModRule Property FHRadPoweredArmorModRule Const Auto Mandatory
 
-Event OnQuestInit()
-	UpdateLegendaryModRules()
-EndEvent
-
 Function UpdateLegendaryModRules()
     ; Armor
 	UpdateModRule("Cunning (Armor)", CunningArmorEnabled, CunningArmorModRule)
